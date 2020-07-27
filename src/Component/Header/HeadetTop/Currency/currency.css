@@ -1,0 +1,53 @@
+.currency {
+    display: inline-block;
+    list-style: none;
+    line-height: 50px;
+    border-right: solid 1px #33333b;
+    padding: 0 20px;
+    box-sizing: border-box;
+    text-align: center;
+
+
+}
+
+
+
+.currency li a {
+    text-decoration: none;
+    font-size: 15px;
+    color: #b5aec4;
+    height: 100px;
+
+}
+
+.angle {
+    font-size: 11px;
+}
+
+.coin {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+    background-color: whitesmoke;
+    list-style: none;
+    line-height: 50px;
+
+
+}
+
+.coin li {
+    padding: 0 10px;
+}
+
+.coin li a {
+    display: block;
+    color: #232530;
+    border-bottom: solid 1px #dddddd;
+    font-size: 13px;
+    text-transform: uppercase;
+}
+
+.coin li :last-child a {
+    border-bottom: none;
+}

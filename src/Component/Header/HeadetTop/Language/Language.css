@@ -1,0 +1,43 @@
+.language {
+    display: inline-block;
+    height: auto;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+.language li {
+    height: 50px;
+    line-height: 50px;
+    border-right: solid 1px #33333b;
+    padding: 0 15px;
+
+
+}
+
+.language li a {
+    text-decoration: none;
+    margin-right: 6px;
+    font-size: 15px;
+    color: #b5aec4;
+}
+
+.angle {
+    font-size: 11px;
+}
+
+.lan {
+    width: 100%;
+    text-align: center;
+    background-color: whitesmoke;
+    list-style: none;
+    line-height: 50px;
+
+}
+
+.lan li a {
+    display: block;
+    color: #232530;
+    border-bottom: solid 1px #dddddd;
+    font-size: 13px;
+    text-transform: uppercase;
+}

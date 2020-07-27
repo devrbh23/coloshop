@@ -1,0 +1,59 @@
+.account {
+    display: inline-block;
+    height: auto;
+    list-style: none;
+    box-sizing: border-box;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.15)
+}
+
+.account li {
+    height: 50px;
+    line-height: 50px;
+    padding: 0 15px;
+    color: #b5aec4;
+
+
+
+}
+
+.account li a {
+    text-decoration: none;
+    margin-right: 6px;
+    font-size: 15px;
+    color: #b5aec4;
+}
+
+.angle {
+    font: size 13;
+
+}
+
+.acc {
+    width: 100%;
+    text-align: center;
+    background-color: whitesmoke;
+    list-style: none;
+    line-height: 50px;
+}
+
+.acc li {
+    border-bottom: solid 1px #dddddd;
+}
+
+
+
+.signIn {
+    padding-right: 10px;
+    color: black;
+
+
+}
+
+.acc a {
+    color: #232530;
+
+    font-size: 13px;
+    text-transform: uppercase;
+    padding-left: 5px;
+    line-height: 50px;
+}

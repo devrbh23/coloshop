@@ -1,24 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import Header from './Component/Header/MainHeader/Header';
+import Item from './Component/Items/Item';
+import SignIn from './Component/Header/HeadetTop/Account/SignIn/SignIn';
 
 function App() {
+  const [show, setShow] = useState(false);
+
+  const sign = (e) => {
+    e.preventDefault();
+    setShow(true);
+    console.log(show);
+  };
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {show ? (
+        <SignIn></SignIn>
+      ) : (
+        <React.Fragment>
+          <Header sign={sign}></Header>
+          <Item></Item>
+        </React.Fragment>
+      )}
     </div>
   );
 }
