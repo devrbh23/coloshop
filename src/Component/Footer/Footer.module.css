@@ -1,0 +1,161 @@
+input {
+  padding: 0;
+}
+
+.container {
+  height: 400px;
+}
+
+.subscribes {
+  width: 100%;
+  height: 120px;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.newsSubs {
+  width: 90%;
+  display: flex;
+}
+
+.newsLetter {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 120px;
+}
+
+h3 {
+  margin-bottom: 0px;
+  line-height: 24px;
+  color: #282828;
+  margin: 0;
+}
+
+.newsLetter p {
+  margin: 0;
+  line-height: 1.7;
+  color: #51545f;
+  font-weight: 500;
+}
+
+.inputField {
+  display: flex;
+  height: 120px;
+  margin-left: 30px;
+  line-height: 120px;
+}
+.input {
+  width: 300px;
+  height: 46px;
+  background: #ffffff;
+  border: none;
+  padding-left: 20px;
+}
+.subscribeBut button {
+  background: #fe4c50;
+  width: 160px;
+  height: 46px;
+  border: none;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 500;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+/* footer */
+.footer {
+  display: flex;
+  padding: 0px 30px;
+  justify-content: space-between;
+}
+.logo {
+  display: flex;
+  width: 50%;
+}
+
+.logoImage {
+  height: 100%;
+}
+.logoImage h1 {
+  margin: 0 0 10px 0;
+}
+.logoImage img {
+  height: 150px;
+}
+.socialLogo {
+  display: flex;
+  height: 250px;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 20px;
+}
+.socialLogo h2 {
+  margin: 0 0 10px 0;
+}
+.icon {
+  height: 35px;
+  width: 35px;
+  border-radius: 6px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.aboutSec {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+
+  margin-top: 30px;
+}
+.about {
+  width: 50%;
+}
+.costumerCare {
+  width: 80%;
+}
+.costumerCare ul {
+  height: auto;
+}
+.costumerCare ul li {
+  height: 35px;
+  line-height: 35px;
+  font-size: 0.85em;
+}
+
+.shop {
+  width: 30%;
+}
+.shop ul {
+  height: auto;
+}
+.shop ul li {
+  height: 35px;
+  line-height: 35px;
+  font-size: 0.85em;
+}
+.copy {
+  line-height: 40px;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: space-between;
+}
+.copy p {
+  margin: 0;
+  padding-left: 20px;
+  font-size: 0.725em;
+}
+.terms {
+  padding-right: 20px;
+  font-size: 0.8em;
+}
+.terms span {
+  margin: 0 10px;
+  border-left: solid;
+  border-right: solid;
+  border-color: #51545f;
+  padding: 0 10px;
+}

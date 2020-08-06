@@ -1,0 +1,151 @@
+a {
+    color: black;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 140px;
+}
+
+.items {
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.selectedCat {
+    width: 100%;
+    height: 60px;
+    border-bottom: solid 1px #ebebeb;
+
+    margin-bottom: 50px;
+}
+
+.selectedCat ul {
+    display: flex;
+    padding-left: 10px;
+}
+
+.selectedCat ul li a {
+    margin-right: 10px;
+    line-height: 60px;
+}
+
+.angle {
+    line-height: 67px;
+    margin-right: 10px;
+}
+
+.productContainer {
+    display: flex;
+}
+
+.productCat {
+    height: auto;
+    width: 30%;
+
+    padding: 0 10px;
+    box-sizing: border-box;
+    margin-right: 10px;
+
+}
+
+.category h5 {
+    font-size: 18px;
+    margin: 0;
+    margin-bottom: 21px;
+}
+
+.category ul {
+    margin-bottom: 30px;
+    border-bottom: solid 1px #ebebeb;
+    padding-bottom: 20px;
+}
+
+.category ul li {
+    height: 40px;
+}
+
+.sliderValue {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.itemList {
+    width: 100%;
+    margin-left: 15px;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.sorting {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.dropDown {
+    display: flex;
+
+    width: 70%;
+    height: 40px;
+}
+
+.itemSort {
+    width: 30%;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border: solid 1px #ebebeb;
+    border-radius: 3px;
+    position: relative;
+    z-index: 5;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.hover:hover+.show {
+    display: block;
+}
+
+.show {
+    display: none;
+    position: relative;
+    z-index: 4;
+    margin-top: 2px;
+    background-color: white;
+}
+
+.show:hover {
+    display: block;
+}
+
+.show li {
+    border-bottom: solid;
+    color: silver;
+    padding: 0 10px;
+}
+
+.hover span {
+    margin-left: 10px;
+}
+
+.sizes {
+    margin-bottom: 20px;
+    border-bottom: solid 1px #ebebeb;
+    padding-bottom: 10px;
+}
+
+.sizes ul li {
+    height: 40px;
+    line-height: 40px;
+    display: block;
+}
+
+.sizes ul li span {
+    margin-left: 10px;
+}

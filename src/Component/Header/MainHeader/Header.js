@@ -7,7 +7,7 @@ const Header = (props) => {
   return (
     <div className="header">
       <HeaderTop sign={props.sign}></HeaderTop>
-      <HeaderBottom></HeaderBottom>
+      <HeaderBottom shop={props.shop}></HeaderBottom>
     </div>
   );
 };

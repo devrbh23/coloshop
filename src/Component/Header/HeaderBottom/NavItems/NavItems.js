@@ -4,7 +4,7 @@ import {FiSearch} from 'react-icons/fi';
 import {FaUserAlt} from 'react-icons/fa';
 import {IoMdCart} from 'react-icons/io';
 
-const NavItems = () => {
+const NavItems = (props) => {
   return (
     <nav className={style.navBar}>
       <ul className={style.navMenu}>
@@ -12,7 +12,9 @@ const NavItems = () => {
           <a href="/">Home</a>
         </li>
         <li>
-          <a href="/">Shop</a>
+          <a href="/" onClick={props.shop}>
+            Shop
+          </a>
         </li>
         <li>
           <a href="/">Blog</a>

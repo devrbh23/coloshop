@@ -1,5 +1,6 @@
 import React from 'react';
 import './Items.css';
+import Banner from '../../Container/Banner/Banner';
 
 const Item = () => {
   return (
@@ -11,7 +12,7 @@ const Item = () => {
           <button>Shop Now</button>
         </div>
       </div>
-      <h3>dddd</h3>
+      <Banner></Banner>
     </div>
   );
 };

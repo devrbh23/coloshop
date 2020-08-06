@@ -1,0 +1,59 @@
+.page {
+
+    height: 40px;
+    width: 100%;
+    display: flex;
+
+    list-style: none;
+    box-sizing: border-box;
+    line-height: 40px;
+    margin-top: 15px;
+}
+
+.count {
+    width: 30%;
+    display: flex;
+}
+
+.currentPage {
+    width: 40px;
+    height: 40px;
+    background-color: #fe4c50;
+    text-align: center;
+    margin-right: 5px;
+}
+
+.lastPage span {
+    margin: 0 15px;
+}
+
+.ArrowAltRight {
+    height: 40px;
+    line-height: 40px;
+}
+
+.sorting {
+    display: flex;
+    justify-content: flex-end;
+    width: 80%;
+}
+
+.result {
+    width: 60%;
+}
+
+.number {
+    width: 144px;
+    margin-right: 0px;
+    padding-right: 12px;
+    border: solid;
+    box-sizing: border-box;
+    border-radius: 3px;
+    display: flex;
+    padding-left: 10px;
+}
+
+.pageNumber a {
+    width: 40px;
+    margin-left: 10px;
+}

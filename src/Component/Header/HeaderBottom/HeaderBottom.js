@@ -3,11 +3,11 @@ import './HeaderBottom.css';
 import Logo from './Logo/Logo';
 import NavItems from './NavItems/NavItems';
 
-const HeaderBottom = () => {
+const HeaderBottom = (props) => {
   return (
     <nav className="headerBottom">
       <Logo></Logo>
-      <NavItems></NavItems>
+      <NavItems shop={props.shop}></NavItems>
     </nav>
   );
 };
