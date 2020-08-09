@@ -3,21 +3,20 @@ import style from './NavItems.module.css';
 import {FiSearch} from 'react-icons/fi';
 import {FaUserAlt} from 'react-icons/fa';
 import {IoMdCart} from 'react-icons/io';
+import {Link, withRouter} from 'react-router-dom';
 
 const NavItems = (props) => {
   return (
     <nav className={style.navBar}>
       <ul className={style.navMenu}>
         <li>
-          <a href="/">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <a href="/" onClick={props.shop}>
-            Shop
-          </a>
+          <Link to={{pathname: '/Shop'}}>Shop</Link>
         </li>
         <li>
-          <a href="/">Blog</a>
+          <Link to={{pathname: '/blog'}}>Blog</Link>
         </li>
         <li>
           <a href="/">Offer</a>
@@ -26,7 +25,7 @@ const NavItems = (props) => {
           <a href="/">Promotion</a>
         </li>
         <li>
-          <a href="/">Contact Us</a>
+          <Link to="/contact">Contact Us</Link>
         </li>
       </ul>
       <ul className={style.navIcon}>
@@ -51,4 +50,4 @@ const NavItems = (props) => {
   );
 };
 
-export default NavItems;
+export default withRouter(NavItems);

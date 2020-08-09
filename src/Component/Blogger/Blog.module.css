@@ -1,0 +1,11 @@
+.container {
+    margin-top: 140px;
+    height: auto;
+
+}
+
+.image {
+    height: 70vh;
+    width: 100%;
+    background-size: contain;
+}

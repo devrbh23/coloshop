@@ -34,6 +34,11 @@ a {
     line-height: 60px;
 }
 
+.selectedCat span {
+    line-height: 60px;
+    cursor: pointer;
+}
+
 .angle {
     line-height: 67px;
     margin-right: 10px;
@@ -67,6 +72,7 @@ a {
 
 .category ul li {
     height: 40px;
+    cursor: pointer;
 }
 
 .sliderValue {
@@ -91,7 +97,7 @@ a {
 .dropDown {
     display: flex;
 
-    width: 70%;
+    width: 60%;
     height: 40px;
 }
 
@@ -122,6 +128,7 @@ a {
 
 .show:hover {
     display: block;
+    line-height: 40px;
 }
 
 .show li {
@@ -148,4 +155,11 @@ a {
 
 .sizes ul li span {
     margin-left: 10px;
+}
+
+
+.select {
+    width: 40%;
+    line-height: 40px;
+    display: contents;
 }

@@ -23,17 +23,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      <div className={style.form}>
-        <h1>Contact Us</h1>
-        <div className={style.contactUs}>
-          <input type="text"></input>
-          <input type="text"></input>
-          <select>
-            <option>Subject</option>
-          </select>
-          <input type="text"></input>
-        </div>
-      </div>
     </div>
   );
 };

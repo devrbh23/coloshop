@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './Account.css';
 import {FaAngleDown, FaSignInAlt} from 'react-icons/fa';
 import {FiUserPlus} from 'react-icons/fi';
+import {Link} from 'react-router-dom';
 const Account = (props) => {
   const [show, setShow] = useState(false);
   const enter = () => {
@@ -23,9 +24,9 @@ const Account = (props) => {
       {show && (
         <ul className="acc">
           <li>
-            <a href="/" onClick={props.sign}>
+            <Link to="signin">
               <FaSignInAlt className="signIn"></FaSignInAlt>Sign in
-            </a>
+            </Link>
           </li>
           <li>
             <a href="/">

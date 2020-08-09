@@ -3,56 +3,7 @@
     height: 100%;
 }
 
-.shoes {
-    border-radius: 4px;
-    display: inline-block;
 
-    text-align: center;
-    width: 33%;
-
-    cursor: pointer;
-
-    list-style: none;
-
-}
-
-.shoe {
-    border-right: 1px solid rgb(233, 233, 233);
-}
-
-.image {
-    width: 180px;
-    height: 180px;
-
-}
-
-.sname {
-    width: 100%;
-}
-
-.sname h6 {
-    margin: 20px 0 10px 0;
-    font-size: 15px;
-    padding: 0 15px;
-    font-weight: 500;
-}
-
-.price {
-    font-size: 16px;
-    color: #fe4c50;
-    font-weight: 600;
-}
-
-.cart {
-    display: flex;
-    margin: 0 1px;
-    justify-content: center;
-    align-items: center;
-    width: auto;
-    height: 40px;
-    background: #fe4c50;
-    border-radius: 3px;
-}
 
 .cds {
     background-color: blue;
