@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './Footer.module.css';
-import image from '../../Container/Image/12.jpg';
+import image from '../Image/12.jpg';
 import {AiFillTwitterCircle} from 'react-icons/ai';
 import {FaFacebook, FaLinkedin, FaInstagram} from 'react-icons/fa';
 

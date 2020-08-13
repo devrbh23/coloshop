@@ -4,6 +4,7 @@ import {AiOutlineMail} from 'react-icons/ai';
 import {FiLock} from 'react-icons/fi';
 import {FaFacebook} from 'react-icons/fa';
 import {FcGoogle} from 'react-icons/fc';
+import {Link} from 'react-router-dom';
 
 const SignIn = () => {
   const [user, setUser] = useState({
@@ -52,7 +53,9 @@ const SignIn = () => {
               <span>Remember Me</span>
             </div>
             <div className={style.loginButton}>
-              <button>LogIn</button>
+              <button>
+                <Link to="/uploadimage">LogIn</Link>
+              </button>
             </div>
           </div>
         </form>

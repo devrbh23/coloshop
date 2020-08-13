@@ -48,37 +48,7 @@ a {
     display: flex;
 }
 
-.productCat {
-    height: auto;
-    width: 30%;
 
-    padding: 0 10px;
-    box-sizing: border-box;
-    margin-right: 10px;
-
-}
-
-.category h5 {
-    font-size: 18px;
-    margin: 0;
-    margin-bottom: 21px;
-}
-
-.category ul {
-    margin-bottom: 30px;
-    border-bottom: solid 1px #ebebeb;
-    padding-bottom: 20px;
-}
-
-.category ul li {
-    height: 40px;
-    cursor: pointer;
-}
-
-.sliderValue {
-    font-size: 15px;
-    font-weight: 600;
-}
 
 .itemList {
     width: 100%;

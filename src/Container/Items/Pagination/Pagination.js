@@ -1,7 +1,7 @@
 import React from 'react';
 import style from './page.module.css';
 
-import SelectPage from './SelectPage';
+import SelectPage from '../Pagination/SelectPage';
 
 const Pagination = (props) => {
   const page = props.pageNumber.map((number) => {

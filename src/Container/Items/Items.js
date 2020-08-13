@@ -4,10 +4,9 @@ import style from './Items.module.css';
 import Product from './Product/Product';
 
 const Items = (props) => {
-  console.log(props.item);
   const items = props.item.map((s, i) => {
     return (
-      <Product key={i} name={s.name} image={s.image} price={s.price}></Product>
+      <Product key={i} name={s.name} image={s.url} price={s.price}></Product>
     );
   });
 

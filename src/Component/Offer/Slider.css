@@ -1,6 +1,6 @@
 .item {
     margin-top: 140px;
-    background-image: url('./offer.jpg');
+    background-image: url('../Image/offer.jpg');
     height: 445px;
     width: 100%;
     background-repeat: no-repeat;
@@ -8,8 +8,6 @@
     background-position: center center;
     position: relative;
     margin-bottom: 10px;
-
-
 }
 
 .summerOffer {

@@ -16,6 +16,7 @@ const Banner = () => {
             <a href="/">Accessories</a>
           </div>
         </div>
+
         <div className={style.women}>
           <div className={style.womenBack}>
             <a href="/">Hot Sell</a>

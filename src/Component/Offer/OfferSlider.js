@@ -1,8 +1,8 @@
 import React from 'react';
-import './Items.css';
-import Banner from '../../Container/Banner/Banner';
+import './Slider.css';
+import Banner from '../Banner/Banner';
 
-const Item = () => {
+const OfferSlider = () => {
   return (
     <div>
       <div className="item">
@@ -17,4 +17,4 @@ const Item = () => {
   );
 };
 
-export default Item;
+export default OfferSlider;
