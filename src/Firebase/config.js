@@ -1,4 +1,5 @@
-import * as firebase from 'firebase/app';
+import * as firebase from 'firebase';
+// import * as firebase from 'firebase/auth';
 import 'firebase/storage';
 import 'firebase/firestore';
 
@@ -13,8 +14,9 @@ var firebaseConfig = {
   measurementId: 'G-3YFR26CRXK',
 };
 
-firebase.initializeApp(firebaseConfig);
+const fire = firebase.initializeApp(firebaseConfig);
 const projectStorage = firebase.storage();
 const projectFirestore = firebase.firestore();
 const timestamp = firebase.firestore.FieldValue.serverTimestamp;
 export {projectStorage, projectFirestore, timestamp};
+export default fire;

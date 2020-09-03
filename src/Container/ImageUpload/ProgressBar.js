@@ -2,9 +2,8 @@ import React, {useEffect} from 'react';
 import useStorage from './useStorage';
 import './Image.css';
 
-// import {motion} from 'framer-motion';
-
 const ProgressBar = ({file, setFile}) => {
+  console.log(file);
   const {progress, url} = useStorage(file);
   console.log(url, progress);
 

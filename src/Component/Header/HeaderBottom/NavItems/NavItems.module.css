@@ -3,10 +3,7 @@
     width: 100%;
     display: flex;
     justify-content: center;
-
-
-
-
+    height: 90px;
 }
 
 
@@ -28,24 +25,31 @@
     font-weight: 500;
     text-transform: uppercase;
     padding: 0 15px;
+    line-height: 90px;
 }
 
 
 .navIcon {
     margin-left: 20px;
     padding-left: 5px;
-
     width: 30%;
     display: flex;
+    position: relative;
+
 
 
 }
 
 .icon {
-    line-height: 90px;
+
     color: #1e1e27;
     padding: 0 9px;
     width: 30px;
+    text-align: center;
+}
+
+.icon a {
+    line-height: 90px;
 }
 
 .cart {
@@ -56,6 +60,7 @@
     height: 40px;
     line-height: 40px;
     border-radius: 40px;
+    margin-right: 20px;
 
 }
 
@@ -72,4 +77,31 @@
     color: #ffffff;
     position: absolute;
     line-height: 20px;
+}
+
+.profile {
+    position: absolute;
+    box-shadow: 0 0 16px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+    background-color: white;
+    width: 50%;
+    right: 10px;
+    line-height: 40px;
+    text-align: center
+}
+
+.profile ul {
+
+    margin-left: 5px;
+    margin-right: 5px;
+
+}
+
+.profile ul li {
+    border-bottom: solid;
+    cursor: pointer;
+}
+
+.profile ul li:nth-child(4) {
+    border-bottom: none;
 }

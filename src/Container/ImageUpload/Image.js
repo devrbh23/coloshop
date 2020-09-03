@@ -1,44 +1,37 @@
-import React, {useState} from 'react';
-import ProgressBar from './ProgressBar';
+import React, {useState, useEffect} from 'react';
 import './Image.css';
-import ImageGrid from './ImageGrid';
-import Modal from './Modal';
+import UploadForm from './UploadForm';
+import {projectFirestore} from '../../Firebase/config';
 
 const Image = () => {
-  const [selected, setSelected] = useState(null);
-  const [file, setFile] = useState(null);
-  const [error, setError] = useState(null);
-  const types = ['image/png', 'image/jpeg', 'image/jpg'];
-
-  const handleChange = (e) => {
-    let selected = e.target.files[0];
-
-    if (selected && types.includes(selected.type)) {
-      setFile(selected);
-      setError('');
-    } else {
-      setFile(null);
-      setError('Please select an image file (png or jpg)');
-    }
-  };
-  console.log(file);
+  const [images, setImages] = useState([]);
+  useEffect(() => {
+    return projectFirestore
+      .collection('items')
+      .orderBy('createdAt')
+      .onSnapshot((snap) => {
+        const documents = [];
+        snap.forEach((doc) => {
+          documents.push({...doc.data(), id: doc.id});
+        });
+        setImages(documents);
+      });
+  }, []);
 
   return (
     <div>
-      <form>
-        <label>
-          <input type="file" onChange={handleChange} />
-          <span>+</span>
-        </label>
-        <div className="output">
-          {error && <div className="error">{error}</div>}
-          {file && <div>{file.name}</div>}
-          {file && <ProgressBar file={file} setFile={setFile} />}
+      <UploadForm></UploadForm>
+      {images && (
+        <div className="img-grid">
+          {images.map((doc) => {
+            return (
+              <div key={doc.id} className="img-wrap">
+                <img src={doc.url} alt="/"></img>
+              </div>
+            );
+          })}
         </div>
-      </form>
-
-      <ImageGrid setSelected={setSelected}></ImageGrid>
-      {selected && <Modal selected={selected}></Modal>}
+      )}
     </div>
   );
 };

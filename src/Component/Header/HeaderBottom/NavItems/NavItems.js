@@ -4,8 +4,12 @@ import {FiSearch} from 'react-icons/fi';
 import {FaUserAlt} from 'react-icons/fa';
 import {IoMdCart} from 'react-icons/io';
 import {Link, withRouter} from 'react-router-dom';
+import fire from '../../../../Firebase/config';
 
 const NavItems = (props) => {
+  const user = () => {
+    fire.auth().signOut();
+  };
   return (
     <nav className={style.navBar}>
       <ul className={style.navMenu}>
@@ -29,14 +33,9 @@ const NavItems = (props) => {
         </li>
       </ul>
       <ul className={style.navIcon}>
-        <li>
+        <li className={style.icon}>
           <a href="/">
-            <FiSearch className={style.icon}></FiSearch>
-          </a>
-        </li>
-        <li>
-          <a href="/">
-            <FaUserAlt className={style.icon}></FaUserAlt>
+            <FiSearch></FiSearch>
           </a>
         </li>
         <li className={style.cart}>
@@ -44,6 +43,19 @@ const NavItems = (props) => {
             <IoMdCart></IoMdCart>
             <i className={style.cartCount}>15</i>
           </a>
+        </li>
+        <li className={style.icon}>
+          <a href="/">
+            <FaUserAlt></FaUserAlt>
+          </a>
+          <div className={style.profile}>
+            <ul>
+              <li>My Account</li>
+              <li>My Orders</li>
+              <li>Cart</li>
+              <li onClick={user}>Log Out</li>
+            </ul>
+          </div>
         </li>
       </ul>
     </nav>

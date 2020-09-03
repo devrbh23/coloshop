@@ -29,9 +29,9 @@ const Account = (props) => {
             </Link>
           </li>
           <li>
-            <a href="/">
+            <Link to="signup">
               <FiUserPlus className="signIn"></FiUserPlus>Register
-            </a>
+            </Link>
           </li>
         </ul>
       )}

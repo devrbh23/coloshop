@@ -7,16 +7,16 @@ import {
 import './Image.css';
 
 const useStorage = (file) => {
-  console.log(file);
+  console.log(file.image.filename.name);
   const [progress, setProgress] = useState(0);
   const [error, setError] = useState(null);
   const [url, setUrl] = useState(null);
 
   useEffect(() => {
     // references
-    const storageRef = projectStorage.ref(file.name);
+    const storageRef = projectStorage.ref(file.image.filename.name);
     let fireStoreRef = projectFirestore.collection('items');
-    storageRef.put(file).on(
+    storageRef.put(file.image.filename).on(
       'state_changed',
       (snap) => {
         let percentage = (snap.bytesTransferred / snap.totalBytes) * 100;
@@ -28,13 +28,14 @@ const useStorage = (file) => {
       async () => {
         const createdAt = timestamp();
         const url = await storageRef.getDownloadURL();
+        const name = file.name;
         fireStoreRef.add({
           url: url,
           createdAt,
-          name: 'Hot Model Dress',
-          cat: 'women',
-          size: 's',
-          price: '20',
+          name: name,
+          cat: file.category,
+          size: file.size,
+          price: file.price,
         });
         return setUrl(url);
       }
