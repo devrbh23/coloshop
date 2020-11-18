@@ -1,6 +1,8 @@
 import React, {useState} from 'react';
 import style from './UploadForm.module.css';
 import ProgressBar from './ProgressBar';
+import {MDBFileInput} from 'mdbreact';
+import InputFile from './InputFile';
 
 const UploadForm = () => {
   const [show, setShow] = useState({hide: true});

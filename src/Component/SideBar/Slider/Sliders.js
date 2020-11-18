@@ -24,7 +24,7 @@ const Sliders = () => {
           getAriaValueText={valuetext}
           min={0}
           max={1000}
-          style={{width: '90%', margin: ' 0 0 10px 10px', color: '#fe4c50'}}
+          // style={{width: '90%', margin: ' 0 0 10px 10px', color: '#fe4c50'}}
         />
       </div>
       <button

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import style from './NavItems.module.css';
 import {FiSearch} from 'react-icons/fi';
 import {FaUserAlt} from 'react-icons/fa';
@@ -7,9 +7,11 @@ import {Link, withRouter} from 'react-router-dom';
 import fire from '../../../../Firebase/config';
 
 const NavItems = (props) => {
+  const [enter, setEnter] = useState(false);
   const user = () => {
     fire.auth().signOut();
   };
+
   return (
     <nav className={style.navBar}>
       <ul className={style.navMenu}>
@@ -44,18 +46,25 @@ const NavItems = (props) => {
             <i className={style.cartCount}>15</i>
           </a>
         </li>
-        <li className={style.icon}>
+        <li
+          className={style.icon}
+          onMouseEnter={() => setEnter(true)}
+          onMouseLeave={() => setEnter(false)}
+        >
           <a href="/">
             <FaUserAlt></FaUserAlt>
           </a>
-          <div className={style.profile}>
-            <ul>
-              <li>My Account</li>
-              <li>My Orders</li>
-              <li>Cart</li>
-              <li onClick={user}>Log Out</li>
-            </ul>
-          </div>
+          {console.log(enter)}
+          {enter && (
+            <div className={style.profile}>
+              <ul>
+                <li>My Account</li>
+                <li>My Orders</li>
+                <li>Cart</li>
+                <li onClick={user}>Log Out</li>
+              </ul>
+            </div>
+          )}
         </li>
       </ul>
     </nav>
