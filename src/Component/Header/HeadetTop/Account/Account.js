@@ -3,6 +3,7 @@ import './Account.css';
 import {FaAngleDown, FaSignInAlt} from 'react-icons/fa';
 import {FiUserPlus} from 'react-icons/fi';
 import {Link} from 'react-router-dom';
+import fire from '../../../../Firebase/config';
 const Account = (props) => {
   const [show, setShow] = useState(false);
   const enter = () => {
@@ -11,6 +12,7 @@ const Account = (props) => {
   const exit = () => {
     setShow(false);
   };
+  const user = fire.auth().currentUser;
 
   return (
     <div onMouseEnter={enter} onMouseLeave={exit}>
@@ -23,16 +25,24 @@ const Account = (props) => {
 
       {show && (
         <ul className="acc">
-          <li>
-            <Link to="signin">
-              <FaSignInAlt className="signIn"></FaSignInAlt>Sign in
-            </Link>
-          </li>
-          <li>
-            <Link to="signup">
-              <FiUserPlus className="signIn"></FiUserPlus>Register
-            </Link>
-          </li>
+          {user ? (
+            <li>
+              <Link to="/uploadimage">Add Item</Link>
+            </li>
+          ) : (
+            <>
+              <li>
+                <Link to="signin">
+                  <FaSignInAlt className="signIn"></FaSignInAlt>Sign in
+                </Link>
+              </li>
+              <li>
+                <Link to="signup">
+                  <FiUserPlus className="signIn"></FiUserPlus>Register
+                </Link>
+              </li>
+            </>
+          )}
         </ul>
       )}
     </div>

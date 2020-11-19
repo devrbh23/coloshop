@@ -9,7 +9,12 @@ import fire from '../../../../Firebase/config';
 const NavItems = (props) => {
   const [enter, setEnter] = useState(false);
   const user = () => {
-    fire.auth().signOut();
+    fire
+      .auth()
+      .signOut()
+      .then(() => {
+        alert('log Out');
+      });
   };
 
   return (

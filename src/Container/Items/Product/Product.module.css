@@ -8,6 +8,8 @@
     cursor: pointer;
 
     list-style: none;
+    box-sizing: border-box;
+    padding: 6px;
 
 }
 
