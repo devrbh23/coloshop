@@ -41,7 +41,7 @@ const User = () => {
       ) : (
         <div className={style.container}>
           <div className={style.form}>
-            <Link to="/home">
+            <Link to="/">
               <FaHome className={style.home}></FaHome>
             </Link>
 

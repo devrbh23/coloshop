@@ -1,11 +1,16 @@
 import React from 'react';
 import Slider from '@material-ui/core/Slider';
 
-const Sliders = () => {
+const Sliders = ({product, item}) => {
   const [value, setValue] = React.useState([0]);
 
   const handleChange = (e, newValue) => {
     setValue(+newValue);
+    const prod = product.filter((i) => {
+      return i.price >= value;
+    });
+
+    item(prod);
   };
   const valuetext = (value) => value;
 
@@ -23,7 +28,7 @@ const Sliders = () => {
           aria-labelledby="range-slider"
           getAriaValueText={valuetext}
           min={0}
-          max={1000}
+          max={10000}
           // style={{width: '90%', margin: ' 0 0 10px 10px', color: '#fe4c50'}}
         />
       </div>

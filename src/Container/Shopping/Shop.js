@@ -15,6 +15,8 @@ const Shop = ({product}) => {
     {value: 'Hot Sell', item: 'hotSell'},
     {value: 'Men', item: 'men'},
   ]);
+  const [priceValue, setPriceValue] = useState([0]);
+
   const [catValue, setCatValue] = useState();
 
   const [filteredItem, setFilteredItem] = useState(product);
@@ -63,7 +65,7 @@ const Shop = ({product}) => {
         <div className={style.selectedCat}>
           <ul>
             <li>
-              <a href="/home">Home</a>
+              <a href="/">Home</a>
             </li>
             <li className={style.angle}>
               <FaAngleRight></FaAngleRight>
@@ -76,77 +78,82 @@ const Shop = ({product}) => {
             checkBox={checkBox}
             cat={cat}
             selectCat={selectCat}
+            product={product}
+            priceValue={setPriceValue}
+            filteredItem={setFilteredItem}
           ></SideBar>
-          <div className={style.itemList}>
-            <div className={style.sorting}>
-              <div className={style.dropDown}>
-                <div className={style.itemSort}>
-                  <ul className={style.hover}>
-                    <li>
-                      <a href="/">Default Sorting</a>
-                    </li>
-                  </ul>
-                  <ul className={style.show}>
-                    <li>
-                      <a href="/"> price</a>
-                    </li>
-                    <li>
-                      <a href="/"> newest</a>
-                    </li>
-                    <li>
-                      <a href="/"> Top sell</a>
-                    </li>
-                  </ul>
+          {filteredItem.length === 0 ? (
+            <div>No Items Available</div>
+          ) : (
+            <div className={style.itemList}>
+              <div className={style.sorting}>
+                <div className={style.dropDown}>
+                  <div className={style.itemSort}>
+                    <ul className={style.hover}>
+                      <li>
+                        <a href="/">Default Sorting</a>
+                      </li>
+                    </ul>
+                    <ul className={style.show}>
+                      <li>
+                        <a href="/"> price</a>
+                      </li>
+                      <li>
+                        <a href="/"> newest</a>
+                      </li>
+                      <li>
+                        <a href="/"> Top sell</a>
+                      </li>
+                    </ul>
+                  </div>
+                  <div className={style.itemSort}>
+                    <ul className={style.hover}>
+                      <li>
+                        <a href="/"> Show:</a>
+                        <span>24</span>
+                      </li>
+                    </ul>
+                    <ul className={style.show}>
+                      <li>
+                        <a href="/"> 6</a>
+                      </li>
+                      <li>
+                        <a href="/"> 12</a>
+                      </li>
+                      <li>
+                        <a href="/"> 24</a>
+                      </li>
+                    </ul>
+                  </div>
                 </div>
-                <div className={style.itemSort}>
-                  <ul className={style.hover}>
-                    <li>
-                      <a href="/"> Show:</a>
-                      <span>24</span>
-                    </li>
-                  </ul>
-                  <ul className={style.show}>
-                    <li>
-                      <a href="/"> 6</a>
-                    </li>
-                    <li>
-                      <a href="/"> 12</a>
-                    </li>
-                    <li>
-                      <a href="/"> 24</a>
-                    </li>
-                  </ul>
+                <div className={style.select}>
+                  <SelectPage
+                    currentPage={currentPage}
+                    lastPage={lastPage}
+                    arrow={arrow}
+                  ></SelectPage>
                 </div>
               </div>
-              <div className={style.select}>
-                <SelectPage
+              <div>
+                <Items
+                  item={filteredItem}
                   currentPage={currentPage}
-                  lastPage={lastPage}
+                  postPerPage={postPerPage}
+                ></Items>
+                <Pagination
+                  posts={filteredItem.length}
+                  postsPerPage={postPerPage}
+                  currentPage={currentPage}
+                  paginate={paginate}
                   arrow={arrow}
-                ></SelectPage>
+                  pageNumber={pageNumbers}
+                  lastPage={lastPage}
+                ></Pagination>
               </div>
             </div>
-            <div>
-              <Items
-                item={filteredItem}
-                currentPage={currentPage}
-                postPerPage={postPerPage}
-              ></Items>
-              <Pagination
-                posts={filteredItem.length}
-                postsPerPage={postPerPage}
-                currentPage={currentPage}
-                paginate={paginate}
-                arrow={arrow}
-                pageNumber={pageNumbers}
-                lastPage={lastPage}
-              ></Pagination>
-            </div>
-          </div>
+          )}
         </div>
       </div>
-
-      <div></div>
     </div>
   );
 };

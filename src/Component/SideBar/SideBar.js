@@ -23,7 +23,7 @@ const SideBar = (props) => {
           width: '100%',
         }}
       >
-        <Sliders></Sliders>
+        <Sliders product={props.product} item={props.filteredItem}></Sliders>
       </div>
 
       <div>
